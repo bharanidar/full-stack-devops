@@ -27,7 +27,7 @@ jobs:
 
       - name: Run tests
         working-directory: backend
-        run: pytest
+        run: PYTHONPATH=. pytest
 
       - name: Login to Docker Hub
         if: github.event_name == 'push'
